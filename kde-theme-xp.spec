@@ -84,8 +84,9 @@ mv -f kde_xpStyle/wallpapers/* $RPM_BUILD_ROOT%{_datadir}/wallpapers
 mv -f kde_xpStyle/pixmaps $RPM_BUILD_ROOT%{_datadir}/apps/kstyle
 mv -f kde_xpStyle/themes $RPM_BUILD_ROOT%{_datadir}/apps/kstyle
 mv -f kde_xpTheme/kde_xp $RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes
+sed -i -e "s,mdk-hicolor,crystalsvg," $RPM_BUILD_ROOT%{_iconsdir}/splx98/index.desktop
 
-%post kde-style-%{_name}
+%post -n kde-style-%{_name}
 /sbin/ldconfig
 echo "You may have to run kinstalltheme for this theme to become available"
 echo "in currently opened sessions."
