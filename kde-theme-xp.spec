@@ -85,6 +85,7 @@ mv -f kde_xpStyle/pixmaps $RPM_BUILD_ROOT%{_datadir}/apps/kstyle
 mv -f kde_xpStyle/themes $RPM_BUILD_ROOT%{_datadir}/apps/kstyle
 mv -f kde_xpTheme/kde_xp $RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes
 sed -i -e "s,mdk-hicolor,crystalsvg," $RPM_BUILD_ROOT%{_iconsdir}/kde_xp/index.desktop
+rm -f $RPM_BUILD_ROOT%{_iconsdir}/kde_xp/index.desktop~
 
 %post -n kde-style-%{_name}
 /sbin/ldconfig
