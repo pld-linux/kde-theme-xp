@@ -4,13 +4,13 @@
 Summary:	KDE theme - %{_name}
 Summary(pl):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
-Version:	0.2
-Release:	1
+Version:	0.9
+Release:	0.1
 License:	GPL
 Group:		Themes
-Source0:	http://digidownload.libero.it/speleoalex/download/kde_%{_name}_full.tar.gz
-# Source0-md5:	630a8c06812b39c6c5410f931c1a9ae0
-URL:		http://www.kde-look.org/content/show.php?content=1499
+Source0:	http://www.speleoalex.altervista.org/download/kde_%{_name}_full-%{version}.tar.gz
+# Source0-md5:	24b8ec815c95c04e5e7c53f08d3109fe
+URL:		http://www.speleoalex.altervista.org/kde.php
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -74,7 +74,7 @@ A kwin decoration that resembles Windows XP Luna (Blue).
 Dekoracja kwin podobna do Windows XP Luna (niebieskiego).
 
 %prep
-%setup -q -n kde_%{_name}_full
+%setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
