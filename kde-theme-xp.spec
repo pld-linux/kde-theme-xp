@@ -5,12 +5,16 @@ Summary:	KDE theme - %{_name}
 Summary(pl):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	0.9
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Themes
 Source0:	http://www.speleoalex.altervista.org/download/kde_%{_name}_full-%{version}.tar.gz
 # Source0-md5:	24b8ec815c95c04e5e7c53f08d3109fe
 URL:		http://www.speleoalex.altervista.org/kde.php
+Requires:	kde-style-%{_name}
+Requires:	kde-icons-%{_name}
+Requires:	kde-decoration-icewm-%{_name}
+Requires:	kde-wallpaper-%{_name}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -94,6 +98,8 @@ echo "in currently opened sessions."
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%files
 
 %files -n kde-style-%{_name}
 %defattr(644,root,root,755)
