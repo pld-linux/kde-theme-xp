@@ -5,7 +5,7 @@ Summary:	KDE theme - %{_name}
 Summary(pl):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	0.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		Themes
 Source0:	http://www.speleoalex.altervista.org/download/kde_%{_name}_full-%{version}.tar.gz
@@ -77,19 +77,36 @@ A kwin decoration that resembles Windows XP Luna (Blue).
 %description -n kde-decoration-icewm-%{_name} -l pl
 Dekoracja kwin podobna do Windows XP Luna (niebieskiego).
 
+%package -n superkaramba-theme-%{_name}
+Summary:	superkaramba theme - %{_name}
+Summary(pl):	motyw superkaramba - %{_name}
+Group:		Themes
+Requires:	superkaramba
+
+%description -n superkaramba-theme-%{_name}
+Superkaramba theme with Windows XP start menu and taskbar.
+
+%description -n superkaramba-theme-%{_name} -l pl
+Motyw superkaramba z menu start i paskiem zadañ z Windowsa XP.
+
 %prep
 %setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_iconsdir},%{_datadir}/{wallpapers,apps/{kstyle,kwin/icewm-themes}}}
+install -d $RPM_BUILD_ROOT{%{_iconsdir},%{_datadir}/{wallpapers,apps/{kstyle,kwin/icewm-themes},themes/superkaramba/xp}}
 mv -f icons/kde_xp $RPM_BUILD_ROOT%{_iconsdir}
 mv -f kde_xpStyle/wallpapers/* $RPM_BUILD_ROOT%{_datadir}/wallpapers
 mv -f kde_xpStyle/pixmaps $RPM_BUILD_ROOT%{_datadir}/apps/kstyle
 mv -f kde_xpStyle/themes $RPM_BUILD_ROOT%{_datadir}/apps/kstyle
 mv -f kde_xpTheme/kde_xp $RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes
+mv -f winbar/* $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xp
 sed -i -e "s,mdk-hicolor,crystalsvg," $RPM_BUILD_ROOT%{_iconsdir}/kde_xp/index.desktop
 rm -f $RPM_BUILD_ROOT%{_iconsdir}/kde_xp/index.desktop~
+rm -f $RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes/default.theme~
+rm -f $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xp/{README,COPYING,Changelog,theme.pyc}
+%py_comp $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xp
+%py_ocomp $RPM_BUILD_ROOT%{_datadir}/themes/superkaramba/xp
 
 %post -n kde-style-%{_name}
 /sbin/ldconfig
@@ -117,3 +134,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -n kde-wallpaper-%{_name}
 %defattr(644,root,root,755)
 %{_datadir}/wallpapers/*
+
+%files -n superkaramba-theme-%{_name}
+%defattr(644,root,root,755)
+%{_datadir}/themes/superkaramba/xp/*
