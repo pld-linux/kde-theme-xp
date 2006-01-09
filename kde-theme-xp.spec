@@ -79,7 +79,7 @@ Dekoracja kwin podobna do Windows XP Luna (niebieskiego).
 
 %package -n superkaramba-theme-%{_name}
 Summary:	superkaramba theme - %{_name}
-Summary(pl):	motyw superkaramba - %{_name}
+Summary(pl):	Motyw superkaramba - %{_name}
 Group:		Themes
 Requires:	superkaramba
 
