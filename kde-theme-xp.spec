@@ -2,7 +2,7 @@
 %define		_name	xp
 
 Summary:	KDE theme - %{_name}
-Summary(pl.UTF-8):   Motyw KDE - %{_name}
+Summary(pl.UTF-8):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	0.9
 Release:	2
@@ -28,7 +28,7 @@ Ten pakiet zawiera dane do upodobnienia KDE do Windows XP Luna
 
 %package -n kde-style-%{_name}
 Summary:	KDE style - %{_name}
-Summary(pl.UTF-8):   Styl do KDE - %{_name}
+Summary(pl.UTF-8):	Styl do KDE - %{_name}
 Group:		Themes
 Requires:	kdelibs
 
@@ -40,7 +40,7 @@ Ten pakiet zawiera styl Windows XP Luna (niebieski) dla KDE.
 
 %package -n kde-icons-%{_name}
 Summary:	KDE icon theme - %{_name}
-Summary(pl.UTF-8):   Motyw ikon do kde - %{_name}
+Summary(pl.UTF-8):	Motyw ikon do kde - %{_name}
 Group:		Themes
 Requires:	kdelibs
 
@@ -52,7 +52,7 @@ Ten pakiet zawiera motyw ikon z Windows XP.
 
 %package -n kde-wallpaper-%{_name}
 Summary:	KDE wallpaper - %{_name}
-Summary(pl.UTF-8):   Tapeta do KDE - %{_name}
+Summary(pl.UTF-8):	Tapeta do KDE - %{_name}
 Group:		Themes
 # Contains /usr/share/wallpapers
 Requires:	kdelibs
@@ -67,7 +67,7 @@ XP.
 
 %package -n kde-decoration-icewm-%{_name}
 Summary:	Icewm window decoration for kwin - %{_name}
-Summary(pl.UTF-8):   Dekoracja icewm dla kwin - %{_name}
+Summary(pl.UTF-8):	Dekoracja icewm dla kwin - %{_name}
 Group:		Themes
 Requires:	kde-decoration-icewm
 
@@ -79,7 +79,7 @@ Dekoracja kwin podobna do Windows XP Luna (niebieskiego).
 
 %package -n superkaramba-theme-%{_name}
 Summary:	superkaramba theme - %{_name}
-Summary(pl.UTF-8):   Motyw superkaramba - %{_name}
+Summary(pl.UTF-8):	Motyw superkaramba - %{_name}
 Group:		Themes
 Requires:	superkaramba
 
